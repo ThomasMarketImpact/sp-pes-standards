@@ -1,0 +1,16 @@
+{
+    "plugins": [
+        "mermaid",
+        "code",
+        "anchor-navigation-ex",
+        "search-plus"
+    ],
+    "pluginsConfig": {
+        "mermaid": {
+            "theme": "default"
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false
+        }
+    }
+}
