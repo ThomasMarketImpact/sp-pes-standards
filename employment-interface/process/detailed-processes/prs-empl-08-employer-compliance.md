@@ -19,7 +19,7 @@
 - **For SP**: Improved contribution collection and worker protection
 - **For Workers**: Ensured access to social protection benefits and legal employment
 
-## Process Flow
+## 🔄 **Process Flow Design (DCI Pattern)**
 
 ```mermaid
 sequenceDiagram

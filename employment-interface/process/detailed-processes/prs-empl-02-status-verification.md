@@ -40,6 +40,39 @@ Enable real-time or batch verification of employment status to:
 
 ## 🔄 **Process Flow Design (DCI Pattern)**
 
+```mermaid
+sequenceDiagram
+    participant SP as SP-MIS
+    participant PES as PES
+    participant Tax as Tax Authority
+    participant SI as Social Insurance
+
+    Note over SP: Benefit Eligibility Review Triggered
+    SP->>PES: GET /employment-status/{person_id}
+
+    PES->>PES: Check Employment Records
+
+    alt Comprehensive Verification Required
+        PES->>Tax: Verify Income & Employment Data
+        Tax-->>PES: Employment & Income Status
+
+        PES->>SI: Check Social Insurance Contributions
+        SI-->>PES: Contribution History & Status
+    end
+
+    PES->>PES: Calculate Verification Confidence Score
+    PES-->>SP: 200 OK (Employment Status + Confidence)
+
+    alt Status Change Detected
+        SP->>SP: Adjust Benefit Eligibility
+        SP->>Beneficiary: Notification of Status Change
+    else Status Confirmed
+        SP->>SP: Continue Current Benefits
+    end
+
+    Note over SP: Decision Logged with Audit Trail
+```
+
 ### **Process Flow 2: Employment Status Verification**
 **File**: `processflow2req.json` / `processflow2res.json`
 **Pattern**: Social Registry Search (adapted)
@@ -354,4 +387,5 @@ POST /employment-status/verify → processflow2 (Status Verification)
 
 ---
 
+**Previous**: [PRS.EMPL.01 — Employment Referral](./prs-empl-01-employment-referral.md)
 **Next**: [PRS.EMPL.03 — Training Benefits](./prs-empl-03-training-benefits.md)

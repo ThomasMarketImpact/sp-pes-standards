@@ -77,7 +77,7 @@ This document outlines the foundational assumptions that apply across all DCI in
 **Rationale**: Global interoperability requires unambiguous temporal data representation.
 
 **Implementation**:
-- DateTime format: `YYYY-MM-DDTHH:mm:ss.sssZ` (UTC) or `�HHMM` offset
+- DateTime format: `YYYY-MM-DDTHH:mm:ss.sssZ` (UTC) or `±HHMM` offset
 - Event timestamps capture both creation and processing times
 - Retention periods specified in human-readable and machine-processable formats
 

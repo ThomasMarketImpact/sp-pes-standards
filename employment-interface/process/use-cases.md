@@ -4,7 +4,7 @@ This document defines the core employment process use cases for Employment-Socia
 
 ## Overview
 
-The Employment-SP interface supports five core process patterns that enable coordinated service delivery between Social Protection systems and Public Employment Services (PES). These processes are grounded in extensive evidence from operational systems including South Korea's Work24 platform (4.2M annual claims), Chile's RSH-SENCE integration (694k beneficiaries), and Germany's comprehensive SGB framework (€1.2B investment).
+The Employment-SP interface supports nine core process patterns that enable coordinated service delivery between Social Protection systems and Public Employment Services (PES). These processes are grounded in extensive evidence from operational systems including South Korea's Work24 platform (4.2M annual claims), Chile's RSH-SENCE integration (694k beneficiaries), and Germany's comprehensive SGB framework (€1.2B investment). The complete framework addresses the full employment lifecycle from initial referral through sustained employment, including specialized support for vulnerable populations.
 
 ---
 
@@ -868,14 +868,197 @@ Enable comprehensive compliance monitoring and enforcement:
 
 ---
 
+# PRS.EMPL.06 — Return to Work Process
+
+**Use Case**: Support individuals with disabilities or health conditions to return to employment through coordinated rehabilitation and accommodation services
+
+## 📊 **Evidence Base from ILO Analysis**
+
+### **Countries with Implementation**
+1. **Germany** - Comprehensive RTW coordination between Federal Employment Agency and statutory health insurance
+2. **Netherlands** - RTW services integration with disability benefit coordination (WIA/WGA)
+3. **Sweden** - Försäkringskassan integration with Arbetsförmedlingen for disability employment
+4. **Canada** - Workplace Safety and Insurance Board coordination with employment services
+5. **Australia** - JobAccess coordination with Centrelink disability support
+
+### **Digital Integration Maturity**
+- **High**: Germany, Netherlands (comprehensive RTW case management systems)
+- **Medium**: Sweden, Canada (coordinated but separate systems)
+- **Developing**: Australia (manual coordination with digital tools)
+
+## 🎯 **Use Case Definition**
+
+### **Actors**
+- **Primary**: Disability Registry, PES (Public Employment Services)
+- **Secondary**: Healthcare Provider, SP-MIS (Social Protection Management Information System)
+- **Supporting**: Occupational Therapist, Employer, Rehabilitation Services
+
+### **Trigger**
+- Medical assessment indicates work capacity restoration
+- Disability benefit review determines potential for employment
+- Individual requests return-to-work support
+- Employer initiates workplace accommodation process
+- Rehabilitation services complete medical intervention
+
+### **Objective**
+Enable coordinated return-to-work planning with integrated support services:
+- Assess work capacity and accommodation needs
+- Coordinate medical rehabilitation with employment services
+- Facilitate workplace modifications and support
+- Provide graduated return-to-work scheduling
+- Maintain disability benefit coordination during transition
+
+---
+
+# PRS.EMPL.07 — Youth Transition Process
+
+**Use Case**: Support young people's transition from education to employment through comprehensive pathway coordination and NEET prevention
+
+## 📊 **Evidence Base from ILO Analysis**
+
+### **Countries with Implementation**
+1. **Germany** - Youth Job Centers (U25) with comprehensive education-employment integration
+2. **Australia** - Youth Jobs PaTH with education-employment pathway coordination
+3. **South Korea** - Youth employment programs with education ministry coordination
+4. **Finland** - Youth Guarantee implementation with education-PES integration
+5. **United Kingdom** - Apprenticeship Levy system with education pathway coordination
+6. **France** - Missions Locales comprehensive youth support system
+
+### **Digital Integration Maturity**
+- **High**: Germany, Finland (comprehensive youth case management systems)
+- **Medium**: Australia, South Korea (coordinated education-employment platforms)
+- **Developing**: UK, France (emerging digital coordination systems)
+
+## 🎯 **Use Case Definition**
+
+### **Actors**
+- **Primary**: Education System, PES (Public Employment Services)
+- **Secondary**: Youth Support Services, SP-MIS (Social Protection Management Information System)
+- **Supporting**: Career Counselor, Training Provider, Employer, Mentor
+
+### **Trigger**
+- Student approaching education completion
+- Early school leaving detected
+- NEET status identification
+- Youth employment program enrollment
+- Career counseling service request
+
+### **Objective**
+Enable comprehensive youth employment pathway coordination:
+- Track education-to-employment transitions
+- Provide career guidance and skills assessment
+- Coordinate apprenticeships and work experience
+- Support NEET prevention and re-engagement
+- Link with youth-specific social protection programs
+
+---
+
+# PRS.EMPL.08 — Employer Compliance Process
+
+**Use Case**: Monitor and enforce employer obligations related to vacancy reporting, employment standards, and PES cooperation requirements
+
+## 📊 **Evidence Base from ILO Analysis**
+
+### **Countries with Implementation**
+1. **Germany** - Comprehensive employer obligations monitoring through Federal Employment Agency
+2. **France** - Pôle emploi employer compliance and vacancy reporting enforcement
+3. **Austria** - AMS employer monitoring and sanction system
+4. **Netherlands** - UWV employer compliance coordination with tax authority
+5. **Belgium** - ONEM employer verification and compliance monitoring
+
+### **Digital Integration Maturity**
+- **High**: Germany, Netherlands (automated compliance monitoring systems)
+- **Medium**: France, Austria (digital monitoring with manual enforcement)
+- **Developing**: Belgium (transitioning to automated systems)
+
+## 🎯 **Use Case Definition**
+
+### **Actors**
+- **Primary**: Labor Inspection Authority, PES (Public Employment Services)
+- **Secondary**: Tax Authority, SP-MIS (Social Protection Management Information System)
+- **Supporting**: Employer, Legal Compliance Officer, Worker Representative
+
+### **Trigger**
+- Routine compliance audit scheduled
+- Employer violation report received
+- Unreported vacancy detection
+- Worker complaint filed
+- Cross-system data inconsistency identified
+
+### **Objective**
+Enable comprehensive employer compliance monitoring and enforcement:
+- Monitor vacancy reporting obligations
+- Detect undeclared employment
+- Enforce employment standards compliance
+- Coordinate sanctions and corrective actions
+- Support fair labor market functioning
+
+---
+
+# PRS.EMPL.09 — PES Client Social Assistance Access Process
+
+**Use Case**: Facilitate PES client access to social assistance programs through coordinated eligibility assessment and referral
+
+## 📊 **Evidence Base from ILO Analysis**
+
+### **Countries with Implementation**
+1. **Chile** - RSH integration enabling PES client access to social programs
+2. **South Korea** - Work24 platform coordination with comprehensive welfare system
+3. **Germany** - SGB II/III coordination for employment and social assistance
+4. **France** - Pôle emploi coordination with social assistance (RSA) programs
+5. **Finland** - TE-Services integration with Kela social security coordination
+6. **Canada** - Employment services coordination with provincial social assistance
+
+### **Digital Integration Maturity**
+- **Advanced**: South Korea (Work24 comprehensive integration), Germany (SGB automated coordination)
+- **High**: Chile, Finland (real-time eligibility coordination)
+- **Medium**: France, Canada (coordinated but separate assessment systems)
+
+## 🎯 **Use Case Definition**
+
+### **Actors**
+- **Primary**: PES (Public Employment Services), SP-MIS (Social Protection Management Information System)
+- **Secondary**: Social Registry, Eligibility Assessment System
+- **Supporting**: PES Caseworker, Social Worker, Beneficiary
+
+### **Trigger**
+- PES client reports financial hardship
+- Employment services participation requires income support
+- Job search period extended beyond unemployment benefit duration
+- Training program enrollment requires additional support
+- Crisis situation requires emergency assistance
+
+### **Objective**
+Enable seamless access to social assistance for PES clients:
+- Assess eligibility for social assistance programs
+- Coordinate income support during employment services
+- Prevent benefit gaps during employment transitions
+- Maintain employment activation requirements
+- Ensure comprehensive support for vulnerable job seekers
+
+---
+
 ## Cross-Process Dependencies
 
 ### Data Flow Relationships
+**Core Employment Cycle**:
 - **PRS.EMPL.01 → PRS.EMPL.02**: Referral creates ongoing verification requirements
 - **PRS.EMPL.02 → PRS.EMPL.05**: Status verification triggers compliance processes
 - **PRS.EMPL.01 → PRS.EMPL.03**: Referral may include training recommendations
 - **PRS.EMPL.03 → PRS.EMPL.04**: Training completion enables job placement
 - **PRS.EMPL.04 → PRS.EMPL.05**: Successful placement initiates ongoing compliance monitoring
+
+**Specialized Support Pathways**:
+- **PRS.EMPL.06 → PRS.EMPL.01**: Return-to-work planning triggers PES referral
+- **PRS.EMPL.06 → PRS.EMPL.03**: Disability-specific training needs identified
+- **PRS.EMPL.07 → PRS.EMPL.01**: Youth transition planning includes PES activation
+- **PRS.EMPL.07 → PRS.EMPL.03**: Education-employment pathways require training coordination
+- **PRS.EMPL.01 → PRS.EMPL.09**: PES registration may trigger social assistance need
+- **PRS.EMPL.09 → PRS.EMPL.01**: Social assistance access enables employment service participation
+
+**Compliance and Enforcement**:
+- **PRS.EMPL.08 → PRS.EMPL.04**: Employer compliance affects job placement availability
+- **PRS.EMPL.04 → PRS.EMPL.08**: Job placement success informs employer compliance rating
 
 ### Shared Business Rules
 - Identity resolution must be consistent across all processes
@@ -893,41 +1076,67 @@ Enable comprehensive compliance monitoring and enforcement:
 
 ## Implementation Priorities
 
-### Phase 1 (Immediate)
-1. **PRS.EMPL.01**: Referral process (highest impact on beneficiary activation)
-2. **PRS.EMPL.02**: Status verification (compliance and fraud prevention)
+### Phase 1 (Immediate - Core Foundation)
+1. **PRS.EMPL.01**: Employment Referral (highest impact on beneficiary activation)
+2. **PRS.EMPL.02**: Status Verification (compliance and fraud prevention)
+3. **PRS.EMPL.09**: PES Client SA Access (critical safety net coordination)
 
-### Phase 2 (Short-term)
-3. **PRS.EMPL.04**: Job placement tracking (outcome measurement)
-4. **PRS.EMPL.05**: Compliance monitoring (program integrity)
+### Phase 2 (Short-term - Service Delivery)
+4. **PRS.EMPL.04**: Job Placement (outcome measurement and benefit transitions)
+5. **PRS.EMPL.05**: Compliance Monitoring (program integrity and enforcement)
 
-### Phase 3 (Medium-term)
-5. **PRS.EMPL.03**: Training benefit enrollment (service enhancement)
+### Phase 3 (Medium-term - Enhanced Services)
+6. **PRS.EMPL.03**: Training Benefits (comprehensive service enhancement)
+7. **PRS.EMPL.07**: Youth Transition (specialized youth pathway support)
+
+### Phase 4 (Long-term - Specialized Support)
+8. **PRS.EMPL.06**: Return to Work (disability employment coordination)
+9. **PRS.EMPL.08**: Employer Compliance (comprehensive labor market oversight)
 
 ### Success Metrics
-- All five use cases operational within 12 months
-- Cross-system data quality >95%
-- Beneficiary experience scores >4.0/5.0
+- **Phase 1-2 (Core)**: All fundamental processes operational within 12 months
+- **Phase 3-4 (Enhanced)**: All nine processes operational within 24 months
+- Cross-system data quality >95% for all processes
+- Beneficiary experience scores >4.0/5.0 across all touchpoints
 - Compliance with data protection regulations: 100%
+- Specialized pathway effectiveness: 70% positive outcomes for vulnerable groups
 
 ---
 
 ## Data Objects Mapping
 
 ### Primary Data Objects
+**Core Employment Processes**:
 - **DO.EMPL.01**: Employment Referral (PRS.EMPL.01)
 - **DO.EMPL.02**: Employment Status Verification (PRS.EMPL.02)
 - **DO.EMPL.03**: Training Benefits (PRS.EMPL.03)
 - **DO.EMPL.04**: Job Placement (PRS.EMPL.04)
 - **DO.EMPL.05**: Compliance Monitoring (PRS.EMPL.05)
 
+**Specialized Support Data Objects**:
+- **DO.EMPL.06**: Return to Work Plan (PRS.EMPL.06)
+- **DO.EMPL.07**: Youth Transition Record (PRS.EMPL.07)
+- **DO.EMPL.08**: Employer Compliance Incident (PRS.EMPL.08)
+- **DO.EMPL.09**: PES Client Social Assistance Eligibility (PRS.EMPL.09)
+
 ### Code Directories Used
+**Core Employment Codes**:
 - **CD.EMPL.01**: EmploymentStatus - Current employment state
 - **CD.EMPL.02**: ReferralReason - Reason for PES referral
 - **CD.EMPL.03**: BenefitType - Type of employment-related benefit
 - **CD.EMPL.04**: TrainingType - Category of training program
 - **CD.EMPL.05**: PlacementType - Type of job placement
 - **CD.EMPL.06**: ComplianceStatus - Compliance monitoring state
+
+**Specialized Support Codes**:
+- **CD.EMPL.07**: ImpairmentType - Types of work-related impairments
+- **CD.EMPL.08**: YouthPathwayType - Education-employment transition pathways
+- **CD.EMPL.09**: ViolationType - Types of employer compliance violations
+- **CD.EMPL.10**: SocialBenefitType - Types of social assistance programs
+- **CD.EMPL.11**: VulnerabilityCategory - Vulnerability assessment categories
+- **CD.EMPL.12**: EligibilityOutcome - Social assistance eligibility results
+
+**Common Codes**:
 - **CD.COM.01**: RequestStatus - Standard request lifecycle states
 
 ---
@@ -935,12 +1144,26 @@ Enable comprehensive compliance monitoring and enforcement:
 ## API Implementation
 
 ### Core API Endpoints
+**Foundation Services**:
 - **POST /referrals** → PRS.EMPL.01 (Employment Referral Creation)
 - **GET /employment-status/{person_id}** → PRS.EMPL.02 (Status Verification)
-- **POST /training-benefits** → PRS.EMPL.03 (Training Benefits Enrollment)
+- **POST /sa-eligibility** → PRS.EMPL.09 (Social Assistance Access)
+
+**Service Delivery**:
 - **POST /job-placements** → PRS.EMPL.04 (Job Placement Creation)
 - **POST /compliance/monitor** → PRS.EMPL.05 (Compliance Assessment)
+
+**Enhanced Services**:
+- **POST /training-benefits** → PRS.EMPL.03 (Training Benefits Enrollment)
+- **POST /youth-transitions** → PRS.EMPL.07 (Youth Pathway Coordination)
+
+**Specialized Support**:
+- **POST /rtw-plans** → PRS.EMPL.06 (Return to Work Planning)
+- **POST /employer-compliance** → PRS.EMPL.08 (Employer Compliance Monitoring)
+
+**Cross-Process**:
 - **POST /notifications** → Cross-process status notifications
+- **GET /process-status/{reference_id}** → Multi-process status tracking
 
 ### Country-Specific Variants
 Each core process includes implementation variants for:
@@ -950,24 +1173,3 @@ Each core process includes implementation variants for:
 - **Australia**: JobActive provider network model
 - **Turkey**: İŞKUR-ISAF coordination model
 
----
-
-## 📖 **Detailed Technical Specifications**
-
-For complete technical implementation details, country-specific variants, and comprehensive JSON examples, see:
-
-- **[PRS.EMPL.01 - Employment Referral](detailed-processes/prs-empl-01-employment-referral.md)** - Complete specification with Chile, South Korea, Turkey, and Kosovo variants
-- **[PRS.EMPL.02 - Status Verification](detailed-processes/prs-empl-02-status-verification.md)** - AI-enhanced verification with South Korea, Chile, South Africa, and Australia examples
-- **[PRS.EMPL.03 - Training Benefits](detailed-processes/prs-empl-03-training-benefits.md)** - Comprehensive coordination with Germany, South Korea, and Uruguay models
-- **[PRS.EMPL.04 - Job Placement](detailed-processes/prs-empl-04-job-placement.md)** - Employment transitions with Chile, South Korea, and Australia implementations
-- **[PRS.EMPL.05 - Compliance Monitoring](detailed-processes/prs-empl-05-compliance-monitoring.md)** - Advanced monitoring with South Korea AI, Germany SGB, and Australia systems
-
-### **Additional Resources**
-- **[JSON-LD Examples & Technical Specifications](../../annexes/jsonld-examples.md)** - Comprehensive index of all JSON examples with country variants
-- **[Country Implementation Patterns](../../implementation/country-examples.md)** - Detailed analysis of real-world implementations with maturity matrix
-
----
-
-`TODO(evidence): Validate use cases with country stakeholders and DCI working groups`
-`TODO(legal): Confirm data sharing legal frameworks for each use case`
-`TODO(technical): Develop integration testing scenarios for cross-process workflows`

@@ -202,9 +202,9 @@ Employment-SP APIs use JSON-LD for semantic interoperability:
     ],
     "name": {
       "@type": "Name",
-      "given_name": "Mar�a",
-      "surname": "Gonz�lez",
-      "full_name": "Mar�a Gonz�lez"
+      "given_name": "María",
+      "surname": "González",
+      "full_name": "María González"
     },
     "demographics": {
       "age_range": "25-35",
@@ -654,12 +654,12 @@ Content-Language: es-CL
     "default_language": "en",
     "localizations": {
       "es-CL": {
-        "referral_reason": "activaci�n_beneficio_desempleo",
-        "status_message": "Derivaci�n creada exitosamente y asignada a trabajador social"
+        "referral_reason": "activación_beneficio_desempleo",
+        "status_message": "Derivación creada exitosamente y asignada a trabajador social"
       },
       "pt-BR": {
-        "referral_reason": "ativa��o_benef�cio_desemprego",
-        "status_message": "Encaminhamento criado com sucesso e atribu�do ao assistente social"
+        "referral_reason": "ativação_benefício_desemprego",
+        "status_message": "Encaminhamento criado com sucesso e atribuído ao assistente social"
       }
     }
   }
@@ -674,8 +674,8 @@ Content-Language: es-CL
   "name_formatting": {
     "culture": "es-CL",
     "pattern": "{given_name} {paternal_surname} {maternal_surname}",
-    "display_name": "Mar�a Gonz�lez Silva",
-    "sorting_name": "Gonz�lez Silva, Mar�a"
+    "display_name": "María González Silva",
+    "sorting_name": "González Silva, María"
   }
 }
 ```

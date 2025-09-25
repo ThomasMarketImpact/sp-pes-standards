@@ -40,6 +40,41 @@ Enable coordinated enrollment in training programs with integrated benefit provi
 
 ## 🔄 **Process Flow Design (DCI Pattern)**
 
+```mermaid
+sequenceDiagram
+    participant Beneficiary as Beneficiary
+    participant PES as PES
+    participant SP as SP-MIS
+    participant Training as Training Provider
+
+    Note over Beneficiary: Skills Assessment Completed
+    Beneficiary->>PES: Request Training Program Enrollment
+
+    PES->>SP: POST /employment-benefits (Training Request)
+    SP->>SP: Verify Benefit Eligibility & Budget
+
+    alt Eligibility Confirmed
+        SP-->>PES: 200 OK (Training Approved)
+        PES->>Training: Enroll Beneficiary in Program
+
+        Training-->>PES: Enrollment Confirmation
+        PES->>SP: Update Training Status (Active)
+
+        loop During Training Period
+            Training->>PES: Progress Reports
+            PES->>SP: Attendance & Progress Updates
+            SP->>SP: Maintain Benefit Continuation
+        end
+
+        Training->>PES: Training Completion Notification
+        PES->>SP: Final Training Outcome Report
+
+    else Eligibility Denied
+        SP-->>PES: 400 Bad Request (Ineligible)
+        PES->>Beneficiary: Alternative Options Provided
+    end
+```
+
 ### **Process Flow 3: Training Benefits Coordination**
 **File**: `processflow3req.json` / `processflow3res.json`
 **Pattern**: IBR Benefit Management (adapted)
@@ -403,4 +438,5 @@ PUT /training-benefits/{enrollment_id}/compliance → Compliance updates
 
 ---
 
+**Previous**: [PRS.EMPL.02 — Status Verification](./prs-empl-02-status-verification.md)
 **Next**: [PRS.EMPL.04 — Job Placement](./prs-empl-04-job-placement.md)

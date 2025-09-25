@@ -9,7 +9,7 @@ This document defines technical specifications for data types and formatting sta
 **Format specification**:
 ```
 YYYY-MM-DDTHH:mm:ss.sssZ        (UTC)
-YYYY-MM-DDTHH:mm:ss.sss�HHMM    (with timezone offset)
+YYYY-MM-DDTHH:mm:ss.sss±HHMM    (with timezone offset)
 ```
 
 **Examples**:

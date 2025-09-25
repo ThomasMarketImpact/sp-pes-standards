@@ -44,6 +44,42 @@ Enable comprehensive compliance monitoring and enforcement:
 
 ## 🔄 **Process Flow Design (DCI Pattern)**
 
+```mermaid
+sequenceDiagram
+    participant SP as SP-MIS
+    participant PES as PES
+    participant Beneficiary as Beneficiary
+    participant System as Monitoring System
+
+    Note over System: Compliance Check Triggered (Weekly/Monthly)
+    SP->>PES: GET /compliance-monitoring (Batch Request)
+
+    PES->>PES: Check Job Search Activities
+    PES->>PES: Verify Training Attendance
+    PES->>PES: Review Employment Status
+
+    PES-->>SP: Compliance Status Report
+
+    alt Compliance Issues Detected
+        SP->>SP: Calculate Compliance Risk Score
+
+        alt Minor Non-Compliance
+            SP->>Beneficiary: Warning Notice + Corrective Actions
+            SP->>PES: Enhanced Monitoring Required
+        else Major Non-Compliance
+            SP->>SP: Apply Graduated Sanctions
+            SP->>Beneficiary: Benefit Reduction/Suspension Notice
+            SP->>PES: Mandatory Intervention Required
+        end
+
+    else Full Compliance
+        SP->>SP: Continue Current Benefits
+        Note over SP: Positive Compliance Record
+    end
+
+    SP->>System: Log Compliance Decision with Audit Trail
+```
+
 ### **Process Flow 5: Compliance Monitoring**
 **File**: `processflow5req.json` / `processflow5res.json`
 **Pattern**: IBR Subscription + Updates (adapted)
@@ -479,4 +515,5 @@ POST /compliance/{person_id}/exemptions → Compliance exemption requests
 
 ---
 
-**Next**: [Country Implementation Patterns](./country-implementation-patterns.md)
+**Previous**: [PRS.EMPL.04 — Job Placement](./prs-empl-04-job-placement.md)
+**Next**: [PRS.EMPL.06 — Return to Work](./prs-empl-06-return-to-work.md)

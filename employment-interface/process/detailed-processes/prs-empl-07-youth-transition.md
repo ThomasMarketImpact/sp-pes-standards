@@ -19,7 +19,7 @@
 - **For SP**: Intergenerational poverty reduction and long-term inclusion
 - **For Youth**: Sustained poverty reduction and enhanced long-term social inclusion
 
-## Process Flow
+## 🔄 **Process Flow Design (DCI Pattern)**
 
 ```mermaid
 sequenceDiagram

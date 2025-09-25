@@ -1,100 +1,3 @@
-# OpenAPI 3.1 Specifications
-
-This document contains the complete OpenAPI specifications for the Employment-SP Interoperability Standards, following DCI patterns and semantic data exchange principles.
-
-## Interactive API Documentation
-
-### Option 1: Redoc Documentation Browser
-
-<div id="redoc-container"></div>
-<script src="https://cdn.jsdelivr.net/npm/redoc@2.1.3/bundles/redoc.standalone.js"></script>
-<script>
-  // Extract YAML from the current document
-  const yamlContent = document.querySelector('pre code.language-yaml')?.textContent ||
-                     document.querySelector('code[class*="yaml"]')?.textContent ||
-                     document.body.textContent.match(/```yaml\n([\s\S]*?)\n```/)?.[1];
-
-  if (yamlContent) {
-    try {
-      // Convert YAML to JSON for Redoc
-      const spec = jsyaml.load(yamlContent);
-      Redoc.init(spec, {
-        theme: {
-          colors: {
-            primary: { main: '#1976d2' }
-          },
-          typography: {
-            fontSize: '14px',
-            lineHeight: '1.5em',
-            fontFamily: '"Roboto", sans-serif'
-          }
-        },
-        expandResponses: "200,201",
-        requiredPropsFirst: true,
-        noAutoAuth: false,
-        pathInMiddlePanel: true,
-        hideHostname: false,
-        expandDefaultServerVariables: true,
-        showExtensions: true
-      }, document.getElementById('redoc-container'));
-    } catch (error) {
-      document.getElementById('redoc-container').innerHTML =
-        '<p>Unable to render API documentation. Please ensure the YAML specification below is valid.</p>';
-    }
-  }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-
-### Option 2: Swagger UI Browser
-
-<div id="swagger-ui"></div>
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@5.9.0/swagger-ui.css" />
-<script src="https://unpkg.com/swagger-ui-dist@5.9.0/swagger-ui-bundle.js"></script>
-<script>
-  // Initialize Swagger UI
-  window.onload = function() {
-    const yamlContent = document.querySelector('pre code.language-yaml')?.textContent ||
-                       document.querySelector('code[class*="yaml"]')?.textContent ||
-                       document.body.textContent.match(/```yaml\n([\s\S]*?)\n```/)?.[1];
-
-    if (yamlContent) {
-      try {
-        const spec = jsyaml.load(yamlContent);
-        SwaggerUIBundle({
-          dom_id: '#swagger-ui',
-          spec: spec,
-          layout: "StandaloneLayout",
-          deepLinking: true,
-          showExtensions: true,
-          showCommonExtensions: true,
-          defaultModelsExpandDepth: 2,
-          defaultModelExpandDepth: 2,
-          displayOperationId: false,
-          tryItOutEnabled: true,
-          requestInterceptor: (request) => {
-            // Add DCI-required headers
-            request.headers['version'] = '1.0.0';
-            request.headers['ts'] = new Date().toISOString();
-            return request;
-          }
-        });
-      } catch (error) {
-        document.getElementById('swagger-ui').innerHTML =
-          '<p>Unable to render Swagger UI. Please ensure the YAML specification below is valid.</p>';
-      }
-    }
-  };
-</script>
-
----
-
-## Employment-SP Interface API Specification
-
-The complete OpenAPI specification is also available as a separate YAML file:
-- **GitBook Documentation**: [employment_api_v1.0.0.yaml](employment_api_v1.0.0.yaml)
-- **DCI Build System**: [employment_api_v1.0.0.yaml](../active-project/dci-standards/src/registry/employment_api_v1.0.0.yaml)
-
-```yaml
 openapi: 3.0.3
 info:
   title: Employment-SP Interoperability APIs
@@ -682,28 +585,27 @@ components:
         - compliance_request
     # Common DCI Components (referenced from common schema paths)
     MsgHeader_V1.0.0:
-      $ref: '../../../common/schema/MsgHeader_V1.0.0.yaml'
+      $ref: '../common/schema/MsgHeader_V1.0.0.yaml'
     MsgCallbackHeader_V1.0.0:
-      $ref: '../../../common/schema/MsgCallbackHeader_V1.0.0.yaml'
+      $ref: '../common/schema/MsgCallbackHeader_V1.0.0.yaml'
     MsgSignature:
-      $ref: '../../../common/schema/MsgSignature.yaml'
+      $ref: '../common/schema/MsgSignature.yaml'
     EncryptedMessage:
-      $ref: '../../../common/schema/EncryptedMessage.yaml'
+      $ref: '../common/schema/EncryptedMessage.yaml'
     Consent:
-      $ref: '../../../common/schema/Consent.yaml'
+      $ref: '../common/schema/Consent.yaml'
     Amount:
-      $ref: '../../../common/schema/Amount.yaml'
+      $ref: '../common/schema/Amount.yaml'
     Error:
-      $ref: '../../../common/schema/Error.yaml'
+      $ref: '../common/schema/Error.yaml'
   responses:
     HttpErrorResponse:
-      $ref: '../../../common/response/HttpErrorResponse.yaml'
+      $ref: '../common/response/HttpErrorResponse.yaml'
     Response:
-      $ref: '../../../common/response/Response.yaml'
+      $ref: '../common/response/Response.yaml'
   securitySchemes:
     Authorization:
       type: http
       scheme: bearer
       bearerFormat: jwt
       description: OAuth2 Bearer token for system-to-system authentication. All Employment-SP API endpoints require valid authentication tokens issued by the DCI authorization server.
-```

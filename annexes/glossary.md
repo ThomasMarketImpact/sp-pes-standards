@@ -25,20 +25,20 @@ The process of determining what actions an authenticated user or system is permi
 Employment-focused interventions including job search assistance, vocational training, work experience programs, and employment subsidies designed to help unemployed individuals return to work.
 
 ### **AZAV Certification**
-German quality assurance framework for vocational training providers (Akkreditierungs- und Zulassungsverordnung Arbeitsf�rderung). Required for training programs funded through Bildungsgutschein vouchers.
+German quality assurance framework for vocational training providers (Akkreditierungs- und Zulassungsverordnung Arbeitsförderung). Required for training programs funded through Bildungsgutschein vouchers.
 
 ---
 
 ## B
 
 ### **BA (Federal Employment Agency - Germany)**
-Germany's federal employment agency (Bundesagentur f�r Arbeit) responsible for employment services, vocational training, and unemployment benefits under the SGB framework.
+Germany's federal employment agency (Bundesagentur für Arbeit) responsible for employment services, vocational training, and unemployment benefits under the SGB framework.
 
 ### **Beneficiary**
 An individual receiving social protection benefits or services. In Employment-SP integration, refers to work-able beneficiaries eligible for referral to employment services.
 
 ### **Bildungsgutschein**
-German training voucher system providing up to �15,000 for certified vocational training programs, with continued unemployment benefit eligibility during training period.
+German training voucher system providing up to €15,000 for certified vocational training programs, with continued unemployment benefit eligibility during training period.
 
 ### **BNE (Bolsa Nacional de Empleo)**
 Chile's National Employment Exchange, an online job matching platform integrated with SENCE employment services and RSH socioeconomic targeting.
@@ -59,7 +59,7 @@ A labeling prefix for standardized enumerations and code lists. Examples include
 ### **Centrelink**
 Australia's service delivery agency for social security payments and services, integrated with JobActive providers for mutual obligations compliance monitoring.
 
-### **Clave�nica**
+### **ClaveÚnica**
 Chile's unified digital identity system enabling single sign-on across government services including RSH, SENCE, and other SP-PES integrated systems.
 
 ### **COM (Common)**
@@ -167,7 +167,7 @@ The process of matching and linking individual records across different systems 
 ### **ILO (International Labour Organization)**
 United Nations agency providing research, standards, and evidence base for Employment-SP integration patterns analyzed in the country implementation examples.
 
-### **0^KUR**
+### **İŞKUR**
 Turkey's Public Employment Service Agency providing employment services, vocational training, and job placement coordination with ISAF social assistance programs.
 
 ### **ISAF (Integrated Social Assistance System)**
@@ -245,7 +245,7 @@ Youth classification for individuals aged 15-29 who are not engaged in education
 ### **OAuth2**
 An authorization framework enabling secure API access through token-based authentication, required for all Employment-SP interoperability endpoints.
 
-### **OMIL (Oficinas Municipales de Informaci�n Laboral)**
+### **OMIL (Oficinas Municipales de Información Laboral)**
 Chile's network of 315 municipal employment information offices providing local access to BNE job matching and SENCE training services.
 
 ### **OpenAPI**
@@ -296,7 +296,7 @@ Chile's Social Household Registry providing socioeconomic classification and vul
 ### **SASSA (South African Social Security Agency)**
 South Africa's social security agency providing social grants, coordinated with UIF employment status verification for benefit eligibility management.
 
-### **SENCE (Servicio Nacional de Capacitaci�n y Empleo)**
+### **SENCE (Servicio Nacional de Capacitación y Empleo)**
 Chile's National Training and Employment Service providing skills training, employment subsidies, and job placement services integrated with RSH targeting.
 
 ### **SGB (Social Code Books)**
@@ -378,7 +378,7 @@ A classification indicating that a social protection beneficiary is capable of w
 
 ### **Country Implementation Systems**
 
-**Chile**: RSH (Social Household Registry), SENCE (Employment Service), BNE (Job Exchange), AFC (Unemployment Insurance), OMIL (Municipal Offices), SII (Tax Authority), Clave�nica (Digital Identity)
+**Chile**: RSH (Social Household Registry), SENCE (Employment Service), BNE (Job Exchange), AFC (Unemployment Insurance), OMIL (Municipal Offices), SII (Tax Authority), ClaveÚnica (Digital Identity)
 
 **South Korea**: Work24 (Unified Platform), KEIS (Employment Information), NBLSS (Basic Livelihood Security), HRD-Korea (Training), Employment Welfare Plus Centers, WorkNet (AI Matching)
 

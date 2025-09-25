@@ -4,7 +4,7 @@ This document provides evidence-based governance models and legal frameworks for
 
 ## Executive Summary
 
-Employment-SP interoperability requires coordinated governance across multiple agencies with distinct mandates, sophisticated legal frameworks enabling data sharing while protecting privacy, and institutional mechanisms that ensure sustainable service integration. This framework is based on analysis of advanced implementations from Chile, South Korea, Germany, Australia, and Turkey, representing over 6 million beneficiaries and �2.4 billion in annual program value.
+Employment-SP interoperability requires coordinated governance across multiple agencies with distinct mandates, sophisticated legal frameworks enabling data sharing while protecting privacy, and institutional mechanisms that ensure sustainable service integration. This framework is based on analysis of advanced implementations from Chile, South Korea, Germany, Australia, and Turkey, representing over 6 million beneficiaries and $2.4 billion in annual program value.
 
 **Key Findings:**
 - **Legal Foundation**: All successful implementations require statutory authority for cross-system data sharing
@@ -95,8 +95,8 @@ All advanced implementations establish clear legal authority for cross-system da
 
 **Key Provisions**:
 ```
-SGB II �52: Data exchange between employment agencies and social assistance providers
-SGB III �51: Job seeker data sharing for employment placement
+SGB II §52: Data exchange between employment agencies and social assistance providers
+SGB III §51: Job seeker data sharing for employment placement
 Privacy Act compliance: Purpose limitation, data minimization, audit requirements
 Administrative Procedure: 2.3 days average decision time with 12% appeal rate
 ```
@@ -106,8 +106,8 @@ Administrative Procedure: 2.3 days average decision time with 12% appeal rate
 #### Pattern 2: Inter-Agency Agreement Framework (Chile Model)
 
 **Chile's Multi-Law Integration Framework**:
-- **Foundation Laws**: Law N� 20.379 (RSH), Law N� 20.338 (SEJ), Law N� 20.595 (SMT)
-- **Data Protection**: Law N� 19.628 (updated by Law N� 21.719) with enhanced privacy requirements
+- **Foundation Laws**: Law Nº 20.379 (RSH), Law Nº 20.338 (SEJ), Law Nº 20.595 (SMT)
+- **Data Protection**: Law Nº 19.628 (updated by Law Nº 21.719) with enhanced privacy requirements
 - **Implementation Mechanism**: Formal inter-institutional agreements authorized by law
 
 **Legal Architecture**:
@@ -124,7 +124,7 @@ Administrative Procedure: 2.3 days average decision time with 12% appeal rate
     "purpose_limitation": "Data use restricted to authorized employment/welfare functions"
   },
   "operational_mechanism": {
-    "agreement_authority": "MDSF Subsecretar�a de Evaluaci�n Social",
+    "agreement_authority": "MDSF Subsecretaría de Evaluación Social",
     "data_specification": "Agreements specify exact data fields and usage scope",
     "audit_requirements": "All queries logged in government interoperability platform"
   }
@@ -136,7 +136,7 @@ Administrative Procedure: 2.3 days average decision time with 12% appeal rate
 #### Pattern 3: Unified Legal Framework (South Korea Model)
 
 **South Korea's Employment Insurance Act Integration**:
-- **Primary Law**: Employment Insurance Act (��ؕ) with social security integration
+- **Primary Law**: Employment Insurance Act (고용보험법) with social security integration
 - **Supporting Laws**: Social Security Basic Act enabling inter-agency coordination
 - **Privacy Framework**: Personal Information Protection Act with government service exemptions
 
@@ -154,7 +154,7 @@ Administrative Procedure: 2.3 days average decision time with 12% appeal rate
 **Chile's Data Minimization Approach**:
 - **Principle**: Share only vulnerability percentile, not detailed household composition
 - **Technical Implementation**: RSH API returns socio-economic classification only
-- **Legal Basis**: Law N� 21.719 mandates "only information strictly necessary for program operation"
+- **Legal Basis**: Law Nº 21.719 mandates "only information strictly necessary for program operation"
 - **Audit Mechanism**: All data queries logged with purpose of use and correlation IDs
 
 **South Korea's Unified Access Model**:

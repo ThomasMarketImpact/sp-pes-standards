@@ -42,6 +42,43 @@ Enable smooth employment transitions with coordinated benefit management:
 
 ## 🔄 **Process Flow Design (DCI Pattern)**
 
+```mermaid
+sequenceDiagram
+    participant Employer as Employer
+    participant PES as PES
+    participant Beneficiary as Beneficiary
+    participant SP as SP-MIS
+
+    Note over Employer: Job Vacancy Available
+    Employer->>PES: Post Job Opportunity
+
+    PES->>PES: Match with Suitable Beneficiaries
+    PES->>Beneficiary: Job Interview Arrangement
+
+    Beneficiary->>Employer: Attend Interview
+    Employer->>PES: Hiring Decision
+
+    alt Job Placement Successful
+        PES->>SP: PUT /job-placements/{placement_id} (Placement Created)
+        SP->>SP: Begin Benefit Transition Process
+
+        PES->>Beneficiary: Job Start Support Services
+
+        loop Employment Monitoring (3-6 months)
+            PES->>Employer: Follow-up on Employment Status
+            PES->>Beneficiary: Job Retention Support
+            PES->>SP: Employment Status Updates
+        end
+
+        Note over SP: Graduated Benefit Reduction
+
+    else Placement Unsuccessful
+        PES->>SP: Update Placement Status (Failed)
+        PES->>Beneficiary: Alternative Job Search Support
+        SP->>SP: Continue Current Benefits
+    end
+```
+
 ### **Process Flow 4: Job Placement Coordination**
 **File**: `processflow4req.json` / `processflow4res.json`
 **Pattern**: IBR Enrollment Updates (adapted)
@@ -543,4 +580,5 @@ POST /job-placements/{placement_id}/interventions → Support interventions
 
 ---
 
+**Previous**: [PRS.EMPL.03 — Training Benefits](./prs-empl-03-training-benefits.md)
 **Next**: [PRS.EMPL.05 — Compliance Monitoring](./prs-empl-05-compliance-monitoring.md)

@@ -19,7 +19,7 @@
 - **For SA**: Better targeting and outreach to eligible populations
 - **For Job Seekers**: Comprehensive support addressing both employment and immediate economic needs
 
-## Process Flow
+## 🔄 **Process Flow Design (DCI Pattern)**
 
 ```mermaid
 sequenceDiagram
@@ -282,4 +282,4 @@ sequenceDiagram
 ---
 
 **Previous**: [PRS.EMPL.08 — Employer Compliance Monitoring](./prs-empl-08-employer-compliance.md)
-**Next**: Summary of Process Standards
+**Next**: [Implementation Operational Guidance](../../../implementation/operational-guidance.md)

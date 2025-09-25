@@ -245,7 +245,7 @@ Content-Language: es-CL
 - Error messages translated to user's preferred language
 - Reference data (enumerations) available in multiple languages
 - Date/number formatting follows locale conventions
-- Fallback hierarchy: requested � country default � English
+- Fallback hierarchy: requested → country default → English
 
 ---
 

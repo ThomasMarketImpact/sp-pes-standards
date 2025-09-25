@@ -20,7 +20,7 @@
 - **Health Services → Both**: Medical clearance, accommodation requirements
 - **All Systems → Employer**: Coordination for workplace modifications and gradual return
 
-## Process Flow
+## 🔄 **Process Flow Design (DCI Pattern)**
 
 ```mermaid
 sequenceDiagram

@@ -42,6 +42,35 @@ Enable automated or semi-automated referral of work-able social assistance benef
 
 ## 🔄 **Process Flow Design (DCI Pattern)**
 
+```mermaid
+sequenceDiagram
+    participant SP as SP-MIS
+    participant PES as PES
+    participant Caseworker as Caseworker
+    participant Beneficiary as Beneficiary
+
+    Note over SP: Work-able Beneficiary Identified
+    SP->>SP: Assess Work Capacity & Eligibility
+    SP->>PES: POST /referrals (DO.EMPL.01)
+
+    PES->>PES: Validate Eligibility & Assign Case
+    PES-->>SP: 200 OK (Referral Accepted)
+
+    PES->>Caseworker: Schedule First Appointment
+    Caseworker->>Beneficiary: Contact Within 5 Working Days
+
+    Note over Beneficiary: Employment Services Begin
+    PES->>SP: Update Referral Status (Active)
+
+    alt Successful Engagement
+        Beneficiary->>PES: Participate in Employment Activities
+        PES->>SP: Regular Progress Updates
+    else Non-Compliance
+        PES->>SP: Non-Compliance Notification
+        SP->>SP: Trigger Benefit Review Process
+    end
+```
+
 ### **Process Flow 1: Standard Employment Referral**
 **File**: `processflow1req.json` / `processflow1res.json`
 **Pattern**: IBR Beneficiary Enrollment (adapted)
