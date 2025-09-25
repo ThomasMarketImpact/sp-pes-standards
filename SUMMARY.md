@@ -4,7 +4,7 @@
 
 * Introduction & Synthesis
   * [Project Background](introduction-synthesis/project-background.md)
-  * [Key Findings from Country Research](introduction-synthesis/key-findings-country-research.md)
+  * [Synthesis of Country Implementation Patterns](introduction-synthesis/Synthesis of Country Implementation Patterns.md)
 
 * Part I: Common Standards
   * [Common Assumptions](common/assumptions.md)

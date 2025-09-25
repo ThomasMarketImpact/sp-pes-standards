@@ -294,12 +294,8 @@ This document establishes data governance principles, privacy requirements, and 
 
 ---
 
-## Open Issues
+## Implementation Support
 
-`TODO(legal)`: Finalize model inter-agency data sharing agreement template with legal review.
-
-`TODO(technical)`: Complete privacy impact assessment for cross-system data flows.
-
-`TODO(operational)`: Establish data protection officer roles and responsibilities across participating agencies.
-
-`TODO(compliance)`: Develop automated compliance monitoring dashboard with real-time violation alerts.
+For implementation guidance and detailed technical specifications, see:
+- [Operational Guidance](../../implementation/operational-guidance.md)
+- [Country Implementation Examples](../../implementation/country-examples.md)
