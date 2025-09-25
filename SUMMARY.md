@@ -2,6 +2,10 @@
 
 * [Home](README.md)
 
+* Introduction & Synthesis
+  * [Project Background](introduction-synthesis/project-background.md)
+  * [Key Findings from Country Research](introduction-synthesis/key-findings-country-research.md)
+
 * Part I: Common Standards
   * [Common Assumptions](common/assumptions.md)
   * [Common Processes](common/processes.md)
@@ -29,6 +33,7 @@
 * Part III: Implementation Guidance
   * [Integration with DCI Interfaces](implementation/dci-integration.md)
   * [Country Case Examples](implementation/country-examples.md)
+  * [Challenges & Lessons Learned](implementation/challenges-lessons-learned.md)
   * [Governance & Legal Aspects](implementation/governance-legal.md)
   * [Operational Guidance](implementation/operational-guidance.md)
   * [Monitoring & Evaluation](implementation/monitoring-evaluation.md)
